@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" style>
+  <head>
+    <style>
+      h1 {
+        font-size: 50px;
+        word-break: break-all;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      form {
+        border: 1px solid #ccc;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      .gc004-dodgerblue {
+        color: dodgerblue;
+      }
+
+      button,
+      .gc-signupbtn {
+        background-color: #04aa6d;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+
+      button:hover {
+        opacity: 1;
+      }
+
+      .gc-cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+      }
+
+      .gc-cancelbtn,
+      .gc-signupbtn {
+        float: left;
+        width: 50%;
+      }
+
+      .gc004-container {
+        padding: 16px;
+      }
+
+      .gc-clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      @media screen and (max-width: 300px) {
+        .gc-cancelbtn,
+        .gc-signupbtn {
+          width: 100%;
+        }
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Untitled</title>
+  </head>
+
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <div class="gc004-container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr />
+        <label for="id_username" class="form-label fw-bold">username</label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="username"
+          required
+          id="id_username"
+        />
+        <label for="id_mail" class="form-label fw-bold">mail</label>
+        <input
+          type="email"
+          placeholder="Enter Gmail"
+          name="mail"
+          required
+          id="id_mail"
+        />
+        <label for="id_password" class="form-label fw-bold">password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          required
+          id="id_password"
+        />
+        <div class="gc-clearfix">
+          <button class="gc-cancelbtn" type="button">Cancel</button>
+          <button class="gc-signupbtn" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
